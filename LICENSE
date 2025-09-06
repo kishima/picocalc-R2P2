@@ -1,4 +1,12 @@
-Copyright © 2022 HASUMI Hitoshi
+MIT License
+
+Copyright © 2022 HASUMI Hitoshi (Original R2P2)
+Copyright © 2024 ClockworkPI (PicoCalc lcdspi and i2ckbd components)
+Copyright © 2025 KAGEYAMA Katsuhiko (PicoCalc-R2P2 modifications)
+
+This project is based on:
+- R2P2 by HASUMI Hitoshi
+- PicoCalc components (lcdspi, i2ckbd) by ClockworkPI
 
 Permission is hereby granted, free of charge, to any person obtaining a
 copy of this software and associated documentation files (the "Software"),

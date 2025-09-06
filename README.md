@@ -1,6 +1,11 @@
 # picocalc-r2p2
-PicoRuby shell for PicoCalc
+PicoRuby shell for PicoCalc.
+This project is currently experimental.
 
 ## build
 
-rake
+./build.sh
+
+## flash
+
+./build.sh flash
