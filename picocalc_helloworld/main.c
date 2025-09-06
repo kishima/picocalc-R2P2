@@ -239,6 +239,8 @@ int main() {
     uart_set_format(uart0, 8, 1, UART_PARITY_NONE);  // 8-N-1
     uart_set_fifo_enabled(uart0, false);
 
+    printf("start picocalc_helloworld\n");
+
     init_i2c_kbd();
     lcd_init();
 
