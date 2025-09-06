@@ -144,6 +144,13 @@ target_link_libraries(${PROJECT_NAME} PRIVATE
   mruby
 )
 
+add_subdirectory(lib/picoruby/mrbgems/picoruby-machine/ports/rp2040/lcdspi)
+add_subdirectory(lib/picoruby/mrbgems/picoruby-machine/ports/rp2040/i2ckbd)
+target_link_libraries(${PROJECT_NAME} PRIVATE
+  lcdspi
+  i2ckbd
+)
+
 # Workaround for Pico2
 if(PICO_BOARD STREQUAL "pico" OR PICO_BOARD STREQUAL "pico_w")
   target_link_libraries(${PROJECT_NAME} PRIVATE
