@@ -15,6 +15,6 @@ target_sources(i2ckbd INTERFACE
         i2ckbd.c
         )
 
-target_link_libraries(i2ckbd INTERFACE  pico_stdlib hardware_spi hardware_i2c)
+target_link_libraries(i2ckbd INTERFACE  pico_stdlib hardware_i2c)
 
 target_include_directories(i2ckbd INTERFACE ${CMAKE_CURRENT_LIST_DIR})

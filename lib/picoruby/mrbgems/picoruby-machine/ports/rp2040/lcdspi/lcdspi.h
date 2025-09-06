@@ -127,5 +127,13 @@ extern void lcd_clear();
 extern void reset_controller(void);
 extern void pin_set_bit(int pin, unsigned int offset);
 
+// Terminal position and color management functions
+extern void set_line_pos(short x, short y);
+extern void get_line_pos(short *x, short *y);
+extern void set_fcolour(int colour);
+extern void set_bcolour(int colour);
+extern void scroll_lcd_spi(int lines);
+extern void draw_rect_spi(int x1, int y1, int x2, int y2, int c);
+
 
 #endif

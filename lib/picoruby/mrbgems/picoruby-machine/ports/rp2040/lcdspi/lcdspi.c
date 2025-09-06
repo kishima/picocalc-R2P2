@@ -8,7 +8,6 @@
 #include <stdio.h>
 
 #include "lcdspi.h"
-#include "i2ckbd.h"
 #include "pico/multicore.h"
 ////////////////////**************************************fonts
 
@@ -440,14 +439,33 @@ void lcd_clear() {
     draw_rect_spi(0, 0, hres - 1, vres - 1, BLACK);
 }
 
+// Terminal position management functions
+void set_line_pos(short x, short y) {
+    current_x = x * gui_font_width;
+    current_y = y * gui_font_height;
+}
+
+void get_line_pos(short *x, short *y) {
+    *x = current_x / gui_font_width;
+    *y = current_y / gui_font_height;
+}
+
+void set_fcolour(int colour) {
+    gui_fcolour = colour;
+}
+
+void set_bcolour(int colour) {
+    gui_bcolour = colour;
+}
+
 void lcd_putc(uint8_t devn, uint8_t c) {
     display_put_c(c);
 }
 
 int lcd_getc(uint8_t devn) {
-    //i2c keyboard
-    int c = read_i2c_kbd();
-    return c;
+    // This function should not handle keyboard input
+    // Keyboard input is handled in machine.c hal_getchar()
+    return -1;
 }
 
 unsigned char __not_in_flash_func(hw1_swap_spi)(unsigned char data_out) {
