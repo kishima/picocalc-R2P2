@@ -1,5 +1,7 @@
 #ifndef LCDSPI_H
 #define LCDSPI_H
+#include "pico/stdlib.h"
+#include "hardware/gpio.h"
 #include "pico/multicore.h"
 #include <hardware/spi.h>
 

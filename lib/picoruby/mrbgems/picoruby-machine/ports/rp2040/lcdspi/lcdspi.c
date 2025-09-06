@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdarg.h>
 
+#include "pico/stdlib.h"
+#include "hardware/gpio.h"
 #include <hardware/spi.h>
 #include "hardware/timer.h"
 #include <ctype.h>
